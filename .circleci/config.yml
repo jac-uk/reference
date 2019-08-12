@@ -1,14 +1,10 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@1.8.0
-executors:
-  default:
-
 workflows:
   version: 2
   test-build-and-deploy:
     jobs:
       - cypress/run:
           start: npm run serve
-          wait-on: 'http://localhost:8002'
-          working_directory: ~/digital-platform
+          wait-on: 'http://127.0.0.1:8002'
