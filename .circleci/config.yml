@@ -3,7 +3,6 @@ orbs:
   cypress: cypress-io/cypress@1.8.0
 executors:
   default:
-    working_directory: ~/digital-platform
 
 workflows:
   version: 2
@@ -12,4 +11,4 @@ workflows:
       - cypress/run:
           start: npm run serve
           wait-on: 'http://localhost:8002'
-
+          working_directory: ~/digital-platform
