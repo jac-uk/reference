@@ -3,14 +3,11 @@ orbs:
   cypress: cypress-io/cypress@1.8.0
 executors:
   default:
-    docker:
-      - image: circleci/node:10.16.0-stretch
     working_directory: ~/digital-platform
-
 
 workflows:
   version: 2
   test-build-and-deploy:
     jobs:
       - cypress/run:
-          start: npm serve
+          start: npm run serve
