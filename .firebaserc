@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "digital-staging-reference",
+    "production": "digital-platform-reference",
+    "staging": "digital-staging-reference"
+  }
+}
